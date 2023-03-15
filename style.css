@@ -102,6 +102,7 @@ body{
 
 .web-dev{
     padding: 2rem;
+    margin: 2rem;
 }
 
 .web-dev .web-dev-img{
@@ -123,6 +124,7 @@ body{
 /** sections **/
 .section{
     padding: 2rem;
+    margin-bottom: 2rem;
 }
 
 .section h1{
@@ -131,6 +133,7 @@ body{
 
 .ow{
     background-color: var(--off-white);
+   
 }
 
 .section .section-sub{
@@ -145,7 +148,7 @@ body{
 
 footer{
     background-color: var(--primary-color);
-    padding: 2rem 1rem;
+    padding: 1rem;
     text-align: center;
     color: white;
     border-top-right-radius: 1rem;
