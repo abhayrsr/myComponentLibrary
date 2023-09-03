@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs</title>
+    <link href = "style.css" rel = "stylesheet" />
+    
+</head>
+<body>
+    
+    <nav class = "navigation container">
+        <div class = "nav-brand">Abhay Raj</div>
+        <ul class = "list-non-bullet nav-pills">
+            <li class = "list-inline">
+                <a class = "link" href="/">Home</a>
+            </li>
+            <li class = "list-inline">
+                <a class = "link" href="/projects.html">Projects</a>
+            </li>
+            <li class = "list-inline">
+                <a class = "link" href="/blogs.html">Blogs</a>
+            </li>
+        </ul>
+    </nav>
+
+    <section class = "section">
+        <h1>What is Web Storage?</h1>
+        <p class = "section-sub">Web storage also known as DOM storage, is one of the feature in HTML5. With web storage, the applications
+            can store the data on the client site and can be manipulated accordingly. The data is mainly stored in key-value form where the 
+            key is a string and the value can be of any data type like strings, numbers, objects converted to JSON strings.
+         </p>
+
+         <h2>Why web storage was introduced?</h2>
+         <p class = "section-sub">Web storage was introduced as a part of HTML5 because there was some limitations in data storing mechanism
+            like cookies(We'll discuss about this later in the blog).
+
+            <li><span style="font-weight:bold">Storage Capacity:</span> Web storage provides developers an ease of storing more data on the client side as compared to
+            cookies. It is easy to store data upto 4mb per domain with web storage.</li>
+            <br/>
+            <li><span style="font-weight:bold">Performance Enhancement:</span> Web storage is designed to be faster and efficient for data storage and retrieval compared
+            to cookies.</li>
+            <br/>
+            <li><span style="font-weight:bold">Security:</span> Web storage is more secure than cookies. There are two strong reasons for that - first, with every HTTP request
+            the data is not sent to the server automatically which limits the data exposure to any third party. Second, web storage follows the same 
+            origin policy that means the data cannot be accessed from different origin or domain keeping the security intact.</li>
+            <br/>
+            Web storage provides two objects to store the data on browser:
+            <br/>
+            <span style="color:#38bdf8">window.localStorage</span>
+            <br/>
+            <span style="color:#38bdf8">window.sessionStorage</span>
+
+         </p>
+
+         <h2>Types of Web Storage</h2>
+         <p class = "section-sub"> There are two types of web storage:
+            <h3>1. Session Storage</h3>
+            <p>It stores the data for one session that means when the browser tab is closed, the data in sessionStorage is cleared. In order to
+                clear the sessionStorage object manually use <span style="color:#38bdf8">sessionStorage.clear()</span>.
+            </p>
+          
+            <p>To store data in session storage, use <span style="color:#38bdf8">sessionStorage.setItem(key, value)</span> method in JavaScript.
+            </p>    
+            
+            <p>To retrieve data, you can use <span style="color:#38bdf8">sessionStorage.getItem(key)</span>
+            </p>
+            <code>sessionStorage.setItem("name", "Peter");<br>
+                const name = sessionStorage.getItem("name");<br>
+                console.log(name);
+            </code>
+            <p><span style = "font-weight:bold">Output:</span> Peter</p>
+
+            <h3>2. Local Storage</h3>
+            <p>It stores the data locally within the browser. Even if you close the browser tab, the data will still remain unless you remove
+                it manually using <span style="color:#38bdf8">localStorage.clear()</span>.
+            </p>
+            <p>To store data in session storage, use <span style="color:#38bdf8">localStorage.setItem(key, value)</span> method in JavaScript.
+            </p>    
+            
+            <p>To retrieve data, you can use <span style="color:#38bdf8">localStorage.getItem(key)</span>
+            </p>
+            <code>localStorage.setItem("name", "Peter");<br>
+                const name = localStorage.getItem("name");<br>
+                console.log(name);
+            </code>
+            <p><span style = "font-weight:bold">Output:</span> Peter</p>
+
+            <h2>Let's discuss a little bit about cookies</h2>
+            <p>Cookies are the small piece of data sent by the web server to user's browser and is stored in user's device. With every request to 
+                the server a cookie is sent back from the user's device.
+            </p>
+
+            <p>We know what are the limitations of using the cookies. But there are certain benefits attached to the usage of cookies some of which
+                are listed below:
+            </p>
+            <li><span style = "font-weight:bold">Cross-Domain sharing:</span> Web storage is restricted to same-origin policy but in case of cross-domain sharing cookies are
+            a nice fit configured to work across different domain, allowing cross-domain authentication and sharing of limited data.</li>
+            <br/>
+            <li><span style = "font-weight:bold">Compatibility:</span> Cookies are well supported by almost all web browsers which makes it quite 
+            compatible to use.</li>
+
+            <p>But still it is recommended to use Web storage over cookies because of its high storage capacity and enhanced security. No doubt, cookies
+                have their place but it all depends on the requirement of your web application.
+            </p>
+         </p>
+
+        
+
+    </section>
+    
+
+    <footer class ="footer">
+        <div class = "footer-header">social media presence</div>
+        <ul class = "social-links list-non-bullet">
+            <li class = "list-inline"><a class = "link" href ="/">Github</a></li>
+            <li class = "list-inline"><a class = "link" href ="/">Twitter</a></li>
+            <li class = "list-inline"><a class = "link" href ="/">LinkedIn</a></li>
+        </ul>
+    </footer>
+</body>
+</html>
